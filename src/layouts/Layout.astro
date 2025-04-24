@@ -1,5 +1,6 @@
 ---
 import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
 import '@fontsource-variable/open-sans';
 ---
 
@@ -10,13 +11,14 @@ import '@fontsource-variable/open-sans';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Simone X Sun</title>
 	</head>
 	<body>
 		<NavBar />
 		<main>
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>
 
