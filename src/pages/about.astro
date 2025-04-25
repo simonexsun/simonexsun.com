@@ -1,7 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	My about page goes here.
+	<img src="src/assets/name_explained.png" width="50%%" alt="Simone Sun" />
+	<h1>About me</h1>
+	<p>
+		Simone is a product designer who specializes in design prototyping for
+		mobile and AR/VR. She is currently leading the design of a
+		subscription-based content platform, shaping creator experiences,
+		subscriber engagement, and content discovery to optimize how users find
+		and interact with monetized content.
+	</p>
+	<h1>Contact</h1>
+	<ul>
+		<li>
+			<a href="https://www.linkedin.com/in/simonesun/">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://github.com/simonexsun">GitHub</a>
+		</li>
+		<li>
+			<a href="instagram.com/simone_x_sun">Instagram</a>
+		</li>
+	</ul>
 </Layout>
+
+<style>
+	h1 {
+		font-family: "League Spartan Variable", sans-serif;
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #333;
+		/* text-transform: uppercase; */
+	}
+
+	p {
+		font-size: 16px;
+		word-wrap: break-word;
+		justify-content: flex-start;
+		text-align: left;
+		align-items: left;
+		font-family: "League Spartan Variable", sans-serif;
+		font-weight: 400;
+		color: var(--Text-Neutral-Secondary, #5a5a5a);
+	}
+</style>
