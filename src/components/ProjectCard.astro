@@ -10,10 +10,8 @@ const { title, description, image, id } = Astro.props as Props;
 ---
 
 <div>
-    <a href="/project/{id}">
-        <img src="{image}" alt="{title}" loading="lazy" />
-        <h3>{title}</h3>
-    </a>
+    <img src={image} alt={title} loading="lazy" />
+    <h3>{title}</h3>
 </div>
 
 

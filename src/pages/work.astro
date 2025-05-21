@@ -11,13 +11,16 @@ const projects = await getCollection("projects");
     <ul>
     {projects.map(project => (
         <li>
+            <a href={`/projects/${project.id}`}>
             <ProjectCard
                 title={project.data.title}
                 description={project.data.description}
                 image={project.data.cover_image.src}
                 id={project.id}
             />
+            </a>
         </li>
+        // <li><a href={`/projects/${project.id}`}>{project.data.title}</a></li>
     ))}
     </ul>
 
