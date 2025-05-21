@@ -4,34 +4,32 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
     <h1>
-        Simone Sun is a <span class="type_emphasis">product designer</span> and <span
-            class="type_emphasis">creative technologist</span
-        > based in Brooklyn, NY.
+        Simone Sun is a <em>product designer</em> and <em>creative technologist</em> based in Brooklyn, NY.
     </h1>
-    <h1 id="index_text">
+    <p>
         She designs digital products and develops AR/VR interactions.
-    </h1>
+    </p>
 </Layout>
 
 <style>
-    h1 {
+    body {
         font-family: "League Spartan Variable", sans-serif;
+    }
+
+    h1 {
         font-size: 2.5rem;
         font-weight: 900;
         font-style: normal;
         color: #333;
     }
 
-    #index_text {
+    em {
+        color: rgb(207, 54, 34);
+        font-style: normal
+    }
+
+    p {
+        font-size: 2rem;
         font-weight: 200;
-    }
-
-    strong {
-        color: rgb(207, 54, 34);
-    }
-
-    .type_emphasis {
-        text-decoration: none;
-        color: rgb(207, 54, 34);
     }
 </style>
