@@ -1,12 +1,11 @@
 ---
 title: Skateboard 4.2 Alpha
-date: 2019-10-02
-cover_image:
-  src: /assets/stock-4.jpg
-  alt: Soft pink and baby blue water ripples together in a subtle texture.
+date: 20123-05-01
+cover: ./cover.png
+coverAlt: a photo of a skateboard with a mileage tracker installed at the bottom
 description: |
-  Skateboard Mileage Counter: First Generation
-client: Parsons
+  A location-based AR walking tour experience for NYC Central Park
+client: Fair Worlds
 ---
 
 ## Design Process

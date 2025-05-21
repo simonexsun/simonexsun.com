@@ -1,16 +1,11 @@
 ---
 title: ECMO VR
 date: 2021-01-01
-cover_image:
-  src: ./cover.jpg
-  alt: a manikin in a VR surgical room
+cover: ./cover.jpg
+coverAlt: a manikin in a VR surgical room
 description: |
   A networked interface for ECMO trainings in virtual reality
 client: CMU Augmented Perception Lab
-tags:
-  - Design
-  - Prototyping
-  - VR
 ---
 
 ## Overall Description
