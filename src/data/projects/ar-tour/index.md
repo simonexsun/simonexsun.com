@@ -1,6 +1,6 @@
 ---
 title: Skateboard 4.2 Alpha
-date: 20123-05-01
+date: 2019-05-01
 cover: ./cover.png
 coverAlt: a photo of a skateboard with a mileage tracker installed at the bottom
 description: |

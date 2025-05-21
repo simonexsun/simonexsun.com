@@ -1,9 +1,8 @@
 ---
 title: Skateboard 4.2 Alpha
 date: 2019-10-02
-cover_image:
-  src: /assets/stock-4.jpg
-  alt: Soft pink and baby blue water ripples together in a subtle texture.
+cover: ./cover.jpg
+coverAlt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
   Skateboard Mileage Counter: First Generation
 client: Parsons

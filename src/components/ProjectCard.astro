@@ -1,16 +1,19 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
     title: string;
     description: string;
-    image: string;
+    cover: ImageMetadata;
+    coverAlt: string;
     id: string;
 }
 
-const { title, description, image, id } = Astro.props as Props;
+const { title, description, cover, coverAlt, id } = Astro.props as Props;
 ---
 
 <div>
-    <img src={image} alt={title} loading="lazy" />
+    <Image src={cover} width=400 alt={coverAlt} />
     <h3>{title}</h3>
 </div>
 

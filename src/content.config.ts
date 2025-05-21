@@ -6,13 +6,11 @@ const projects = defineCollection({
         pattern: "**/*.md",
         base: "./src/data/projects" 
     }),
-    schema: z.object({
+    schema: ({ image }) => z.object({
         title: z.string(),
         description: z.string(),
-        cover_image: z.object({
-            src: z.string(),
-            alt: z.string(),
-        }),
+        cover: image(),
+        coverAlt: z.string(),
         date: z.date(),
         client: z.string(),
         //role_description: z.string(), // OPTIONAL: short description of the type of work I did, e.g. "UI/UX Design", "Development", etc.
