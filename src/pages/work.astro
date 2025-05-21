@@ -1,15 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
-import { getCollection } from 'astro:content';
-const projects = await getCollection('projects');
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
 ---
 
 <Layout>
-	<h1>My projects</h1>
+    <h1>My projects</h1>
     <ul>
     {projects.map(project => (
-        <li><a href={`/projects/${project.id}`}>{project.data.title}</a></li>
+        <li>
+            <ProjectCard
+                title={project.data.title}
+                description={project.data.description}
+                image={project.data.cover_image.src}
+                id={project.id}
+            />
+        </li>
     ))}
     </ul>
+
+    <ProjectCard
+        title="Skateboard"
+        description="World"
+        image="/images/placeholder.png"
+        id="1"
+    />
 </Layout>
