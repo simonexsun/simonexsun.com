@@ -24,3 +24,22 @@ const projects = await getCollection("projects");
     ))}
     </ul>
 </Layout>
+
+<style>
+    body {
+        font-family: "League Spartan Variable", sans-serif;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    a {
+        text-decoration: none; 
+        color: inherit;   
+    }
+</style>
