@@ -10,41 +10,84 @@ client: Fair Worlds
 
 ## Overview
 
-- ROLE: UX Designer & Prototyper
-- TIMELINE: 12 weeks
-- TEAM: co-founder, UI designer, engineer, 3D artist, accessibility consultant, scriptwriters
-- TYPE: Internship/contractor
-- TOOLS: Figma, Unity, Blender, BitBucket
-
-## Background Research
-
 ### Challenge Summary
 
 Fair Worlds has an existing AR tour for Seattle Center, and they want to create a sequel experience for a popular attraction in New York City.
 
+- ROLE: UX Designer & Prototyper
+- TIMELINE: 8 weeks
+- TEAM: co-founder, UI designer, engineer, 3D artist, accessibility consultant, scriptwriters
+- TYPE: Internship/contractor
+- TOOLS: Figma, Unity, Blender, BitBucket
+
+### Timeline
+
+With an 8-week timeline to design and prototype the MVP, I strategically mapped out my workflows to stay on track.
+
+![alt](timeline.png)
+
+## Background Research
+
+To ensure clarity and efficiency from the start, I kicked off the project with targeted research.
+
 ### Research Questions
+
+I began by breaking the larger challenge into smaller, actionable pieces to keep the work manageable and focused.
+
+![alt](research-questions.png)
 
 ### Conduct Research
 
-### Research Insights
+Understanding the market landscape was essential for building a relevant product, so I conducted competitive analysis through structured desk research, which led to a clear articulation of our unique value proposition.
 
-## Concept Development
+![alt](uvp.png)
+
+To validate assumptions and uncover real user needs, I ran usability testing and user interviews. Insights from these sessions directly informed an updated set of user personas and clarified our future focus areas.
+
+![alt](persona.png)
+
+## Design Process
 
 ### Ideation
 
 Based on the design constrains, I narrowed ideas down to the following route, and annotated it on an interactive online map (Felt Map):
 
+![alt](ideation.png)
+
 ### User Flow
+
+I redefined the user flow to enhance navigation and improve overall ease of use.
+
+![alt](user-flow-1.png)
+![alt](user-flow-2.png)
+
+### Design Immersive Way Finding
+
+![alt](way-finding.png)
+
+### Design 3D Map Camera Control
+
+![alt](map-control.png)
+
+### Design AR Placement Interaction
+
+![alt](ar-placement.png)
+
+### Accessibility Considerations
+
+![alt](accessibility.png)
+
+### UI Touch-up
+
+![alt](ui-touch-up.png)
 
 ## Deliverables
 
-### UI Kit 
+![alt](deliverables.png)
 
-I redesigned the iOS app interface using Figma, and created fun interactions to complement the gaming elements of the tours.
+### App Store Release
 
-### User Flow 
-
-### Shipped Beta in App Store
+![alt](app-store-release.png)
 
 ## Takeaways
 
