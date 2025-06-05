@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
 ---
 
 <Layout>
@@ -9,15 +13,27 @@ import Layout from "../layouts/Layout.astro";
     <p>
         She designs digital products and develops AR/VR interactions.
     </p>
+    <h1>My projects</h1>
+    <ul>
+    {projects.map(project => (
+        <li>
+            <a href={`/projects/${project.id}`}>
+            <ProjectCard
+                title={project.data.title}
+                description={project.data.description}
+                cover={project.data.cover}
+                coverAlt={project.data.coverAlt}
+                id={project.id}
+            />
+            </a>
+        </li>
+    ))}
+    </ul>
 </Layout>
 
 <style>
-    body {
-        font-family: "League Spartan Variable", sans-serif;
-    }
-
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 900;
         font-style: normal;
         color: #333;
@@ -27,9 +43,17 @@ import Layout from "../layouts/Layout.astro";
         color: rgb(207, 54, 34);
         font-style: normal
     }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
-    p {
-        font-size: 2rem;
-        font-weight: 200;
+    a {
+        text-decoration: none; 
+        color: inherit;   
     }
 </style>
