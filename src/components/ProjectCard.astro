@@ -18,7 +18,7 @@ const { title, description, cover, coverAlt, id } = Astro.props as Props;
         <Image src={cover} width=400 alt={coverAlt} />
     </div>
     <div class="project-content">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{description}</p>
     </div>
 </div>
@@ -60,24 +60,15 @@ const { title, description, cover, coverAlt, id } = Astro.props as Props;
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
-        gap: 4px;
         align-self: stretch;
+        gap: 0.5rem;
     }
     
-    h2 {
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%;
+    h3 {
         margin: 0;
     }
 
     p {
-        font-size: 1rem;
-        font-style: normal;
-        line-height: 120%;
-        color: #666;
         margin: 0;
     }
-
 </style>

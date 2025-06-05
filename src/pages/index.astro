@@ -13,7 +13,7 @@ const projects = await getCollection("projects");
     <p>
         She designs digital products and develops AR/VR interactions.
     </p>
-    <h1>My projects</h1>
+    <h2>My projects</h2>
     <ul>
     {projects.map(project => (
         <li>
@@ -32,13 +32,6 @@ const projects = await getCollection("projects");
 </Layout>
 
 <style>
-    h1 {
-        font-size: 2rem;
-        font-weight: 900;
-        font-style: normal;
-        color: #333;
-    }
-
     em {
         color: rgb(207, 54, 34);
         font-style: normal
