@@ -15,7 +15,7 @@ const { title, description, cover, coverAlt, id } = Astro.props as Props;
 <div class="project-card">
 
     <div class="project-image">
-        <Image src={cover} width=400 alt={coverAlt} />
+        <Image src={cover} width=400 densities={[1.5, 2]} alt={coverAlt} />
     </div>
     <div class="project-content">
         <h3>{title}</h3>
