@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    section_name: string;
+    header: string;
+    description: string;
+}
+
+const { section_name, header, description } = Astro.props as Props;
+---
+
+<div class="story-block">
+    <h5>{section_name}</h5>
+    <div class="text-strip">
+        <h3 class="text-tile">{header}</h3>
+        <p class="text-tile">{description}</p>
+    </div>
+    <div class="block-content">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .story-block {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .text-strip {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+    }
+
+    .text-tile {
+        flex: 1;
+        min-width: 0; /* Prevents overflow */
+        flex-wrap: wrap;
+        align-self: stretch;
+    }
+
+    h3 {
+        margin: 0px;
+        line-height: 100%;
+    }
+
+    h5 {
+        font-size: 1rem;
+        font-weight: 500;		
+        font-style: normal;
+        line-height: 100%;
+        color: var(--Text-Neutral-Tertiary);
+        margin:0;
+    }
+    
+    p {
+        margin: 0;
+    }
+</style>
