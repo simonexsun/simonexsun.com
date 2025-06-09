@@ -3,7 +3,7 @@ import { glob, file } from 'astro/loaders';
 
 const projects = defineCollection({
     loader: glob({ 
-        pattern: "**/*.md",
+        pattern: "**/*.{md,mdx}",
         base: "./src/data/projects" 
     }),
     schema: ({ image }) => z.object({
