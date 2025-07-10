@@ -19,5 +19,15 @@ const { Content } = await render(post);
 
 <Layout>
     <h1>{post.data.title}</h1>
-    <Content />
+    <article>
+      <Content />
+    </article>
 </Layout>
+
+<style is:global>
+  /* TODO: actually resize these images instead of relying on CSS */
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
