@@ -7,12 +7,18 @@ const projects = await getCollection("projects");
 ---
 
 <Layout>
-    <h1>
-        Simone Sun is a <em>product designer</em> and <em>creative technologist</em> based in Brooklyn, NY.
+    <h1 class="hero-headline">
+        <em>Product designer</em> who builds with <em>code</em>. 
+        </br>
+        Williamsburg, NY.
     </h1>
-    <p>
-        She designs digital products and develops AR/VR interactions.
-    </p>
+    <h1 class="hero-description">
+        Full-stack product designer with early-stage startup experience doing end-to-end design and getting products out the door. 
+        </br>
+        Very technically focused and like to work directly with engineering. 
+        I bring a scrappy, get-it-done mindset to fast-moving teams.
+    </h1>
+    
     <h2>Selected work</h2>
     <ul>
     {projects.map(project => (
@@ -32,6 +38,20 @@ const projects = await getCollection("projects");
 </Layout>
 
 <style>
+    .hero-headline {
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: auto;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+        font-weight: 300;
+		font-style: normal;
+		line-height: 110%;
+		color: var(--Text-Neutral-Secondary);
+    }
+
     em {
         color: rgb(207, 54, 34);
         font-style: normal
