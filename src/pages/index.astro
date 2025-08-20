@@ -7,17 +7,23 @@ const projects = await getCollection("projects");
 ---
 
 <Layout>
-    <h1 class="hero-headline">
-        <em>Product designer</em> who builds with <em>code</em>. 
-        </br>
-        Williamsburg, NY.
-    </h1>
-    <h1 class="hero-description">
-        Full-stack product designer with early-stage startup experience doing end-to-end design and getting products out the door. 
-        </br>
-        Very technically focused and like to work directly with engineering. 
-        I bring a scrappy, get-it-done mindset to fast-moving teams.
-    </h1>
+    <div class="hero-section">
+        <div class="text-block">
+            <h1 class="hero-headline">
+                <em>Product designer</em> who builds with <em>code</em>. 
+                </br>
+                Williamsburg, NY.
+            </h1>
+            <h1 class="hero-description">
+                Full-stack product designer with <em>early-stage startup experience</em> doing end-to-end design and getting products out the door. 
+            </h1>
+            <h1 class="hero-description">
+                Very technically focused and like to work directly with engineering. 
+                I bring a scrappy, get-it-done mindset to fast-moving teams.
+            </h1>
+        </div>
+        <div class="interactive">   </div>
+    </div>
     
     <h2>Selected work</h2>
     <ul>
@@ -38,6 +44,13 @@ const projects = await getCollection("projects");
 </Layout>
 
 <style>
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+
     .hero-headline {
         font-size: 2.5rem;
         font-weight: 400;
@@ -51,6 +64,15 @@ const projects = await getCollection("projects");
 		line-height: 110%;
 		color: var(--Text-Neutral-Secondary);
     }
+
+    @media (max-width: 900px) {
+    .interactive {
+        display: none;
+    }
+    .hero-section {
+        grid-template-columns: 1fr; /* Stack content on mobile */
+    }
+}
 
     em {
         color: rgb(207, 54, 34);
