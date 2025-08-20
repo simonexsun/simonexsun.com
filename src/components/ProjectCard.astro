@@ -25,16 +25,16 @@ const { title, description, cover, coverAlt, id } = Astro.props as Props;
 
 <style>
     .project-card {
-        border-radius: 8px;
+        /* border-radius: 8px; */
         overflow: hidden;
         background-color:"#fff";
-        border: 1px solid #e0e0e0;
+        /* border: 1px solid #e0e0e0; */
         transition:
             box-shadow 0.3s ease;
     }
 
     .project-card:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
     }
 
     .project-image {
@@ -57,11 +57,11 @@ const { title, description, cover, coverAlt, id } = Astro.props as Props;
     }
 
     .project-content {
-        padding: 1.5rem;
+        padding-top: 1rem;
         display: flex;
         flex-direction: column;
         align-self: stretch;
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
     
     h3 {
