@@ -10,19 +10,11 @@ const projects = await getCollection("projects");
     <div class="hero-section">
         <div class="text-block">
             <h1 class="hero-headline">
-                <em>Product designer</em> who builds with <em>code</em>. 
-                </br>
-                Williamsburg, NY.
+                Simone Sun is a <em>product designer</em> and <em>prototyper</em> based in Williamsburg, NY. 
             </h1>
             <h1 class="hero-description">
-                Full-stack product designer with <em>early-stage startup experience</em> doing end-to-end design and getting products out the door. 
-            </h1>
-            <h1 class="hero-description">
-                Very technically focused and like to work directly with engineering. 
-                I bring a scrappy, get-it-done mindset to fast-moving teams.
-            </h1>
+                She designs digital products and prototypes them with code.
         </div>
-        <div class="interactive">   </div>
     </div>
     
     <h2>Selected projects</h2>
@@ -45,24 +37,23 @@ const projects = await getCollection("projects");
 
 <style>
     .hero-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-        gap: 2rem;
-        padding-bottom: 1rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 
     .hero-headline {
         font-size: 2.5rem;
-        font-weight: 400;
+        font-weight: 600;
         line-height: auto;
+        text-transform: uppercase;
     }
 
     .hero-description {
-        font-size: 1.25rem;
-        font-weight: 300;
+        font-size: 2.5rem;
+        font-weight: 600;
 		font-style: normal;
 		line-height: 110%;
-		color: var(--Text-Neutral-Secondary);
+		color: var(--Text-Neutral-Tertiary);
     }
 
     @media (max-width: 900px) {
