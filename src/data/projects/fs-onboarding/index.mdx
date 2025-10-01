@@ -9,6 +9,7 @@ client: FanSpark
 ---
 
 import StoryBlock from "../../../components/StoryBlock.astro";
+import HorizontalBreak from "../../../components/HorizontalBreak.astro";
 
 <StoryBlock
   section_name=""
@@ -23,6 +24,8 @@ import StoryBlock from "../../../components/StoryBlock.astro";
   description={`Testing showed that this system enabled over <strong>90%</strong> of new creators to complete onboarding successfully within their first attempt. \n
   Bonus: The solution also established a reusable pattern that can be <strong>scaled easily</strong> to new product areas and user roles.`}
 ></StoryBlock>
+
+<HorizontalBreak isDivider={true}/>
 
 ## Early version of onboarding drop-off was at 45%, undermining the platform's growth.
 
@@ -43,6 +46,8 @@ import StoryBlock from "../../../components/StoryBlock.astro";
   header="People Problem"
   description={`For athletes, the time and energy spent setting up a profile didn't feel <strong>worth the uncertain return</strong> — making them less motivated to invest in the platform.`}
 ></StoryBlock>
+
+<HorizontalBreak isDivider={false}/>
 
 <StoryBlock
   section_name="Research"
@@ -71,6 +76,8 @@ import StoryBlock from "../../../components/StoryBlock.astro";
   header="Lack of Guidance"
   description={`<strong>90%</strong> creators don’t know what to do after existing onboarding -- users struggled to take meaningful actions after signing up.`}
 ></StoryBlock>
+
+<HorizontalBreak isDivider={true}/>
 
 ## How might we help new users (athletes creators) see clear, tangible value from FanSpark so they’re motivated to adopt the new platform?
 
