@@ -1,0 +1,22 @@
+---
+const { isDivider = true } = Astro.props;
+---
+
+<hr class={isDivider ? "with-border" : "no-border"} />
+
+<style>
+.with-border {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    display: block;
+    margin-top: 3em;
+    margin-bottom: 4em;
+    width: 100%;
+}
+.no-border {
+    border: none;
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+}
+</style>
