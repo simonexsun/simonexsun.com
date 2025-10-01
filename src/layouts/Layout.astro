@@ -6,97 +6,103 @@ import "@fontsource-variable/league-spartan";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://use.typekit.net/khl6tql.css">
-		<meta name="generator" content={Astro.generator} />
-		<title>Simone X Sun</title>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://use.typekit.net/khl6tql.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Simone X Sun</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--Text-Hover: #cf3622;
-		--Text-Neutral-Primary: #333;
-		--Text-Neutral-Secondary: #5a5a5a;
-		--Text-Neutral-Tertiary: #a0a0a0;
-		--Text-Neutral-Link: #cf3622;
-		--Color-Background: #f9f9f9;
-	}
+  :root {
+    --Text-Hover: #cf3622;
+    --Text-Neutral-Primary: #333;
+    --Text-Neutral-Secondary: #5a5a5a;
+    --Text-Neutral-Tertiary: #a0a0a0;
+    --Text-Neutral-Link: #cf3622;
+    --Color-Background: #f9f9f9;
+  }
 
-	h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        font-style: normal;		
-		line-height: 120%;
-        color: var(--Text-Neutral-Primary);
-    }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 120%;
+    color: var(--Text-Neutral-Primary);
+  }
 
-	h2 {
-		font-size: 1.75rem;
-		font-weight: 600;
-		font-style: normal;
-		line-height: 120%;
-		color: var(--Text-Neutral-Primary);
-	}
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 120%;
+    color: var(--Text-Neutral-Primary);
+  }
 
-	h3 {
-		font-size: 1.5rem;
-		font-weight: 400;
-		font-style: normal;
-		line-height: 120%;
-		color: var(--Text-Neutral-Primary);
-	}
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 120%;
+    color: var(--Text-Neutral-Primary);
+  }
 
-	p {
-        font-size: 1.25rem;
-        font-weight: 300;
-		font-style: normal;
-		line-height: 110%;
-		color: var(--Text-Neutral-Secondary);
-	}
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 110%;
+    color: var(--Text-Neutral-Secondary);
+    white-space: pre-line; /* turns \n into line breaks */
+  }
 
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
 
-	li {
-		font-size: 1.25rem;
-		font-weight: 300;
-		font-style: normal;
-		line-height: 110%;
-		color: var(--Text-Neutral-Primary);
-	}
+  li {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 110%;
+    color: var(--Text-Neutral-Primary);
+  }
 
-	a {
-		color: var(--Text-Neutral-Secondary);
-		text-decoration: none;
-	}
+  a {
+    color: var(--Text-Neutral-Secondary);
+    text-decoration: none;
+  }
 
-	a:hover {
-        color: var(--Text-Hover);
-        transition: color 0.5s ease;
-    }
+  a:hover {
+    color: var(--Text-Hover);
+    transition: color 0.5s ease;
+  }
+
+  strong {
+    font-weight: 500;
+    color: var(--Text-Neutral-Primary);
+  }
 </style>
 
 <style>
-	body {
-		font-family: "League Spartan Variable", sans-serif;
-		margin: 0;
-	}
+  body {
+    font-family: "League Spartan Variable", sans-serif;
+    margin: 0;
+  }
 
-	main {
-		padding: 0 10vw 10vh 10vw;
-		align-items: center;
-	}
+  main {
+    padding: 0 10vw 10vh 10vw;
+    align-items: center;
+  }
 </style>
