@@ -1,0 +1,181 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    title: string;
+    cover: ImageMetadata;
+    coverAlt: string;
+    overview: string;
+    role: string;
+    timeline: string;
+    team: string;
+    type: string;
+    tools: string;
+}
+
+const { title, cover, coverAlt, overview, role, timeline, team, type, tools } = Astro.props as Props;
+---
+
+<div class="hero">
+  <!-- Project title -->
+  <h1>{title}</h1>
+
+  <!-- Hero image -->
+  <div class="hero-image">
+    {cover ? (
+      <Image
+        src={cover}
+        alt={coverAlt ?? 'Hero image'}
+        width={1200}
+        sizes="100%"
+        loading="eager"
+      />
+    ) : null}
+  </div>
+
+  <!-- Project Overview -->
+  <div class="hero-content">
+    <div style="display:flex; flex-direction:column; gap:24px">
+      <p>{overview}</p>
+    </div> 
+    <ul class="project-specs">
+      {role ? (
+        <li class="specs-item">
+          <span class="specs-key">role</span>
+          <span class="specs-value">{role}</span>
+        </li>
+      ) : null}
+      {timeline ? (
+        <li class="specs-item">
+          <span class="specs-key">timeline</span>
+          <span class="specs-value">{timeline}</span>
+        </li>
+      ) : null
+      }
+      {team ? (
+        <li class="specs-item">
+          <span class="specs-key">team</span>
+          <span class="specs-value">{team}</span>
+        </li>
+      ) : null}
+      {type ? (
+        <li class="specs-item">
+          <span class="specs-key">type</span>
+          <span class="specs-value">{type}</span>
+        </li>
+      ) : null}
+      {tools ? (
+        <li class="specs-item">
+          <span class="specs-key">tools</span>
+          <span class="specs-value">{tools}</span>
+        </li>
+      ) : null}
+    </ul>
+  </div>
+</div>
+
+<style>
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.hero-image {
+  background-color: #f3f3f3; /* light grey background while image loads */
+  overflow: hidden;
+  border-radius: 8px;
+  display: block;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom:0;
+} 
+
+p {
+  margin:0;
+}
+
+.project-specs {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.specs-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;              /* make all items grow equally */
+  min-width: 0;         /* prevent content overflow / text spill */
+  overflow: auto;
+}
+
+.specs-key {
+  color: var(--Text-Neutral-Secondary, #5a5a5a);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;		
+  font-style: normal;
+  line-height: 100%;
+  color: var(--Text-Neutral-Tertiary);
+  margin:0;
+}
+
+.specs-value {
+  color: var(--Text-Neutral-Secondary, #5a5a5a);
+}
+
+/* When screen width < 600px */
+@media (max-width: 600px) {
+
+  .hero {
+    gap: 40px;              /* reduce spacing for mobile */
+    margin-bottom: 30px;
+  }
+
+  .hero-content {
+    gap: 30px;
+  }
+
+  .project-specs {
+    flex-direction: column;  /* stack vertically */
+  }
+
+  .specs-item {
+    flex-direction: row;     /* align key and value horizontally */
+  }
+  
+  .specs-key {
+    width: 30%;
+  }
+
+  .specs-value {
+    text-align: left;
+    overflow: auto;
+    width: 100%;
+  }
+}
+</style>
