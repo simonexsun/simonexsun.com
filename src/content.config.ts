@@ -8,13 +8,17 @@ const projects = defineCollection({
     }),
     schema: ({ image }) => z.object({
         title: z.string(),
-        description: z.string(),
+        description: z.string(), // A short summary of the project
         cover: image(),
         coverAlt: z.string(),
         date: z.date(),
-        client: z.string(),
-        //role_description: z.string(), // OPTIONAL: short description of the type of work I did, e.g. "UI/UX Design", "Development", etc.
-        //tags: z.array(z.string()),
+        client: z.string().optional(),
+        overview: z.string().optional(), // A longer summary of the project
+        role: z.string().optional(), // short description of the type of work I did, e.g. "UI/UX Design", "Development", etc.
+        type: z.string().optional(), // e.g. "Full time", "Contract"
+        timeline: z.string().optional(), // e.g. "3 months", "6 weeks"
+        team: z.string().optional(), // e.g. "co-founder, UI designer, engineer"
+        tools: z.string().optional(), // e.g. "Figma, Astro, Three.js"
 
         /*
         name: z.string(),
