@@ -11,11 +11,13 @@ const { section_name, header, description } = Astro.props as Props;
 ---
 
 <div class="story-block">
-    <h5>{section_name}</h5>
-    <div class="text-strip">
-        <h3 class="text-tile" set:html={header}></h3>
-        <p class="text-tile" set:html={description}></p>
-    </div>
+    <div class="block-header">
+        <h5>{section_name}</h5>
+        <div class="text-strip">
+            <h3 class="text-tile" set:html={header}></h3>
+            <p class="text-tile" set:html={description}></p>
+        </div>
+    <div/>
     <div class="block-content">
         <slot />
     </div>
@@ -25,15 +27,22 @@ const { section_name, header, description } = Astro.props as Props;
     .story-block {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 60px;
         display: flex;
         align-items: flex-start;
+    }
+
+    .block-header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
     }
 
     .text-strip {
         display: flex;
         align-items: flex-start;
-        gap: 16px;
+        gap: 24px;
         align-self: stretch;
     }
 
