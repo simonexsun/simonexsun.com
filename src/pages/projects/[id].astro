@@ -54,4 +54,20 @@ const { Content } = await render(post);
     padding: 60px;
     border-radius: 8px;
   }
+
+  /* When screen width < 600px */
+  @media (max-width: 600px) {
+
+    article {
+      gap: 30px;
+    }
+
+    .block-content p {
+      margin-bottom: 30px;
+    }
+  
+    .block-content :has(*) {
+      padding: 30px;
+    }
+  }
 </style>

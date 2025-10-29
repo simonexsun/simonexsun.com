@@ -28,7 +28,6 @@ const { section_name, header, description } = Astro.props as Props;
         display: flex;
         flex-direction: column;
         gap: 60px;
-        display: flex;
         align-items: flex-start;
     }
 
@@ -69,5 +68,23 @@ const { section_name, header, description } = Astro.props as Props;
     
     p {
         margin: 0;
+    }
+
+    /* When screen width < 600px */
+    @media (max-width: 600px) {
+
+        .story-block {
+            gap: 30px;
+        }
+
+        .block-header {
+            gap: 20px;
+        }
+            
+        .text-strip {
+            flex-direction: column;  /* stack vertically */
+            gap: 16px;               /* reduce spacing for mobile */
+        }
+
     }
 </style>
