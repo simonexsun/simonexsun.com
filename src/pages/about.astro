@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 	<h2>About Me</h2>
 	<div class="two-columns">
-		<div>
+		<div class="column_1">
 			<p>
 				Simone is a product designer who specializes in design
 				prototyping for mobile and AR/VR. 
@@ -66,7 +66,9 @@ import Layout from "../layouts/Layout.astro";
 			</ul>
 		</div>
 
-		<img src="src/assets/portrait.jpeg" width="40%" height="auto" alt="Simone Sun" />
+		<div class="column_2">
+			<img src="src/assets/portrait.jpeg" alt="Simone Sun" />
+		</div>
 	</div>
 
 	<h3>Side Projects</h3>
@@ -74,7 +76,7 @@ import Layout from "../layouts/Layout.astro";
 	<div class="interactive">
 		<iframe
 			src="https://simonexsun.github.io/creative-coding/midterm/music-box/index.html"
-			style="width:100%; height:400px; border:none;"
+			style="width:100%; height:400px; border:none; border-radius:8px;"
 		>
 		</iframe>
 	</div>
@@ -86,9 +88,30 @@ import Layout from "../layouts/Layout.astro";
 		padding-top: 2rem;
 	}
 
+	p {
+		margin-top: 0;
+		white-space: normal;
+	}
+
 	.two-columns {
 		display:flex;
 		gap: 2rem;
+	}
+
+	.column_1 {
+		flex: .6;
+		display: block;
+	}
+
+	.column_2 {
+		flex: .4;
+		display: block;
+		height: auto;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
 	}
 
 	ul {
