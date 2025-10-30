@@ -25,20 +25,18 @@ const { title, description, cover, coverAlt, id } = Astro.props as Props;
 
 <style>
     .project-card {
-        /* border-radius: 8px; */
         overflow: hidden;
-        /* border: 1px solid #e0e0e0; */
         transition:
             box-shadow 0.3s ease;
     }
 
     .project-card:hover {
-        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
     }
 
     .project-image {
         aspect-ratio: 16 / 9;
         align-self: stretch;
+        border-radius: 8px;
         overflow: hidden;
         transition: 
             transform 0.5s ease;

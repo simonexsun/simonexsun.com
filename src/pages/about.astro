@@ -1,4 +1,5 @@
 ---
+import HorizontalBreak from "../components/HorizontalBreak.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -70,8 +71,8 @@ import Layout from "../layouts/Layout.astro";
 			<img src="src/assets/portrait.jpeg" alt="Simone Sun" />
 		</div>
 	</div>
-
-	<h3>Side Projects</h3>
+	<HorizontalBreak isDivider={false}/>
+	<h3>Here's a fancy interactive tech I've made...</h3>
 
 	<div class="interactive">
 		<iframe
@@ -120,5 +121,11 @@ import Layout from "../layouts/Layout.astro";
 		flex-direction: row;
 		gap: 1rem;
 		padding-left: 0;
+	}
+
+	@media (max-width: 600px) {
+		.two-columns {
+			flex-direction: column;
+		}
 	}
 </style>
