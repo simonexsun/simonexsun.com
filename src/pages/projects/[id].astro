@@ -53,13 +53,8 @@ const { Content } = await render(post);
 		color: var(--Text-Neutral-Link);
 		text-decoration: none;
 	}
-
+  
   /* In StoryBlock, If the slot (block-content) has any child elements inside */
-  .block-content p {
-    margin: 0;
-    line-height: 0;
-    margin-bottom: 60px;
-  }
   .block-content :has(*) {
     background-color: var(--Color-Background);
     padding: 60px;
