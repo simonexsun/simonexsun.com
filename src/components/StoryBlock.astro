@@ -24,6 +24,8 @@ const { section_name, header, description } = Astro.props as Props;
 </div>
 
 <style>
+
+    /* TODO: remove elements what don't have content to keep spacing compact */
     .story-block {
         display: flex;
         flex-direction: column;
@@ -65,7 +67,7 @@ const { section_name, header, description } = Astro.props as Props;
     @media (max-width: 600px) {
 
         .story-block {
-            gap: 30px;
+            gap: 16px;
         }
 
         .block-header {
