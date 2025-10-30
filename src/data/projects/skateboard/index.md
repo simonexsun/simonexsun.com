@@ -6,6 +6,9 @@ coverAlt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
   Skateboard Mileage Counter: First Generation
 client: Parsons
+role: IoT Device Builder, Student
+team: myself
+tools: 3D printer, Arduino, Soldering kit
 ---
 
 ## Design Process
