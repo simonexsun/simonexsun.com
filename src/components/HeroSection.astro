@@ -85,7 +85,7 @@ const { title, cover, coverAlt, overview, role, timeline, team, type, tools } = 
 }
 
 .hero-image {
-  background-color: #f3f3f3; /* light grey background while image loads */
+  background-color: var(--Color-Background); /* light grey background while image loads */
   overflow: hidden;
   border-radius: 8px;
   display: block;
@@ -93,6 +93,7 @@ const { title, cover, coverAlt, overview, role, timeline, team, type, tools } = 
 
 .hero-image img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
