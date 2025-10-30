@@ -4,12 +4,12 @@ import { Image } from 'astro:assets';
 interface Props {
     title: string;
     cover: ImageMetadata;
-    coverAlt: string;
-    overview: string;
+    coverAlt?: string;
+    overview?: string;
     role: string;
-    timeline: string;
+    timeline?: string;
     team: string;
-    type: string;
+    type?: string;
     tools: string;
 }
 
