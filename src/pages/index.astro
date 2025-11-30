@@ -9,11 +9,12 @@ const projects = await getCollection("projects");
 <Layout>
     <div class="hero-section">
         <div class="text-block">
-            <h1 class="hero-headline">
-                Simone Sun is a <em>product designer</em> and <em>prototyper</em> based in Williamsburg, NY. 
-            </h1>
-            <h1 class="hero-description">
+            <h3 class="hero-headline">
+                Simone Sun is a <em>product designer</em> and <em>prototyper</em> based in Brooklyn, NY. 
+            </h3>
+            <h3 class="hero-description">
                 She designs digital products and prototypes them with code.
+            </h3>
         </div>
     </div>
     
@@ -37,35 +38,19 @@ const projects = await getCollection("projects");
 
 <style>
     .hero-section {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 4rem;
+        padding-bottom: 4.5rem;
+        width: 50%;
     }
 
-    .hero-headline {
-        font-family: urw-form-expanded, sans-serif;
-        font-size: 2.5rem;
-        font-weight: 600;
-        line-height: auto;
+    h3.hero-headline {
         text-transform: uppercase;
     }
 
-    .hero-description {
-        font-family: urw-form-expanded, sans-serif;
-        font-size: 2.5rem;
-        font-weight: 600;
-		font-style: normal;
-		line-height: 110%;
+    h3.hero-description {
 		color: var(--Text-Neutral-Tertiary);
+        text-transform: uppercase;
     }
-
-    @media (max-width: 900px) {
-    .interactive {
-        display: none;
-    }
-    .hero-section {
-        grid-template-columns: 1fr; /* Stack content on mobile */
-    }
-}
 
     em {
         color: rgb(207, 54, 34);
@@ -87,8 +72,22 @@ const projects = await getCollection("projects");
     }
 
     @media (max-width: 740px) {
+        .hero-section {
+            width: 80%;
+            padding-top: 0rem;
+            padding-bottom: .5rem;
+        }
+
         ul {
             row-gap: 5rem;
         }
     }
+
+    @media (max-width: 900px) {
+        .hero-section {
+            padding-top: 0rem;
+            padding-bottom: .5rem;
+        }
+    }
+
 </style>
