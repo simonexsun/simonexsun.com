@@ -6,11 +6,11 @@ interface Props {
     cover: ImageMetadata;
     coverAlt?: string;
     overview?: string;
-    role: string;
+    role?: string;
     timeline?: string;
-    team: string;
+    team?: string;
     type?: string;
-    tools: string;
+    tools?: string;
 }
 
 const { title, cover, coverAlt, overview, role, timeline, team, type, tools } = Astro.props as Props;
