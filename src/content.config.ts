@@ -7,12 +7,12 @@ const projects = defineCollection({
         base: "./src/data/projects" 
     }),
     schema: ({ image }) => z.object({
+        // Required fields
         title: z.string(),
         description: z.string(), // A short summary of the project
         cover: image(),
         coverAlt: z.string(),
-        date: z.date(),
-      }).passthrough(), // Allow additional fields in markdown without validation
+      }).passthrough(), // Allow any additional free-form fields (team, tools, timeline, type, client, overview, role, date, etc.)
   });
 
   export const collections = { projects };
