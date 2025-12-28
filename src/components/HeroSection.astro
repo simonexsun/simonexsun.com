@@ -44,12 +44,23 @@ const freeFormFields = Object.entries(rest)
       </div>
     ) : null}
     <ul class="project-specs">
-      {freeFormFields.map(([key, value]) => (
-        <li class="specs-item">
-          <h5 class="specs-key">{key}</h5>
-          <p class="specs-value">{String(value)}</p>
-        </li>
-      ))}
+      {freeFormFields.map(([key, value]) => {
+        // For year field, extract just the year if it's a Date object, otherwise display as is
+        let displayValue = value;
+        if (key === 'date') {
+          if (value instanceof Date) {
+            displayValue = value.getFullYear();
+          } else {
+            displayValue = value;
+          }
+        }
+        return (
+          <li class="specs-item">
+            <h5 class="specs-key">{key}</h5>
+            <p class="specs-value">{String(displayValue)}</p>
+          </li>
+        );
+      })}
     </ul>
   </div>
 </div>
