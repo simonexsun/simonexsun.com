@@ -6,14 +6,17 @@ interface Props {
     cover: ImageMetadata;
     coverAlt?: string;
     overview?: string;
-    role: string;
-    timeline?: string;
-    team: string;
-    type?: string;
-    tools: string;
+    [key: string]: any; // Allow any additional free-form fields
 }
 
-const { title, cover, coverAlt, overview, role, timeline, team, type, tools } = Astro.props as Props;
+const { title, cover, coverAlt, overview, ...rest } = Astro.props as Props;
+
+// Extract all free-form fields (exclude mandatory fields: title, cover, coverAlt, description)
+// and overview (which is displayed separately)
+const mandatoryFields = ['title', 'cover', 'coverAlt', 'description'];
+const freeFormFields = Object.entries(rest)
+    .filter(([key]) => !mandatoryFields.includes(key) && key !== 'overview')
+    .filter(([_, value]) => value !== undefined && value !== null && value !== '');
 ---
 
 <div class="hero">
@@ -35,41 +38,29 @@ const { title, cover, coverAlt, overview, role, timeline, team, type, tools } = 
 
   <!-- Project Overview -->
   <div class="hero-content">
-    <div style="display:flex; flex-direction:column; gap:24px">
-      <p>{overview}</p>
-    </div> 
+    {overview ? (
+      <div style="display:flex; flex-direction:column; gap:24px">
+        <p>{overview}</p>
+      </div>
+    ) : null}
     <ul class="project-specs">
-      {role ? (
-        <li class="specs-item">
-          <h5 class="specs-key">role</h5>
-          <p class="specs-value">{role}</p>
-        </li>
-      ) : null}
-      {timeline ? (
-        <li class="specs-item">
-          <h5 class="specs-key">timeline</h5>
-          <p class="specs-value">{timeline}</p>
-        </li>
-      ) : null
-      }
-      {team ? (
-        <li class="specs-item">
-          <h5 class="specs-key">team</h5>
-          <p class="specs-value">{team}</p>
-        </li>
-      ) : null}
-      {type ? (
-        <li class="specs-item">
-          <h5 class="specs-key">type</h5>
-          <p class="specs-value">{type}</p>
-        </li>
-      ) : null}
-      {tools ? (
-        <li class="specs-item">
-          <h5 class="specs-key">tools</h5>
-          <p class="specs-value">{tools}</p>
-        </li>
-      ) : null}
+      {freeFormFields.map(([key, value]) => {
+        // For year field, extract just the year if it's a Date object, otherwise display as is
+        let displayValue = value;
+        if (key === 'date') {
+          if (value instanceof Date) {
+            displayValue = value.getFullYear();
+          } else {
+            displayValue = value;
+          }
+        }
+        return (
+          <li class="specs-item">
+            <h5 class="specs-key">{key}</h5>
+            <p class="specs-value">{String(displayValue)}</p>
+          </li>
+        );
+      })}
     </ul>
   </div>
 </div>

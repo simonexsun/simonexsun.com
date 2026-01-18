@@ -20,15 +20,7 @@ const { Content } = await render(post);
 
 <Layout>
     <HeroSection
-      title={post.data.title}
-      cover={post.data.cover}
-      coverAlt={post.data.coverAlt}
-      overview={post.data.overview}
-      role={post.data.role}
-      timeline={post.data.timeline}
-      team={post.data.team}
-      type={post.data.type}
-      tools={post.data.tools}
+      {...post.data}
     />
     <article>
       <Content />
