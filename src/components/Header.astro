@@ -1,6 +1,8 @@
 <nav>
     <li>
-        <a id="logo" href="/">Simone X Sun</a>
+        <a id="logo" href="/" aria-label="Simone X Sun — Home">
+            <img src="/logo.png" alt="Simone X Sun" width="180" height="40" style="display: block; width: 180px; max-width: 100%; height: auto;" />
+        </a>
     </li>
 
     <ul>
@@ -69,9 +71,25 @@
     }
 
     #logo {
-        font-weight: bold;
-        text-decoration: none;
-        font-family: urw-form-expanded, sans-serif;
+        display: block;
+        width: 180px;
+    }
+
+    #logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    @media (min-width: 376px) and (max-width: 600px) {
+        #logo {
+            width: 160px;
+        }
+
+        ul {
+            gap: 1rem;
+        }
     }
 
     #back-to-top {

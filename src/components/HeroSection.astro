@@ -6,14 +6,16 @@ interface Props {
     cover: ImageMetadata;
     coverAlt?: string;
     overview?: string;
+    overviewLink?: { text: string; url: string };
     [key: string]: any; // Allow any additional free-form fields
 }
 
-const { title, cover, coverAlt, overview, ...rest } = Astro.props as Props;
+const { title, cover, coverAlt, overview, overviewLink, ...rest } = Astro.props as Props;
+const overviewLinkIndex = overviewLink && overview ? overview.indexOf(overviewLink.text) : -1;
 
 // Extract all free-form fields (exclude mandatory fields: title, cover, coverAlt, description)
 // and overview (which is displayed separately)
-const mandatoryFields = ['title', 'cover', 'coverAlt', 'description'];
+const mandatoryFields = ['title', 'cover', 'coverAlt', 'description', 'hidden'];
 const freeFormFields = Object.entries(rest)
     .filter(([key]) => !mandatoryFields.includes(key) && key !== 'overview')
     .filter(([_, value]) => value !== undefined && value !== null && value !== '');
@@ -40,7 +42,7 @@ const freeFormFields = Object.entries(rest)
   <div class="hero-content">
     {overview ? (
       <div style="display:flex; flex-direction:column; gap:24px">
-        <p>{overview}</p>
+        <p>{overviewLink && overviewLinkIndex >= 0 ? <>{overview.slice(0, overviewLinkIndex)}<a href={overviewLink.url} target="_blank" rel="noopener noreferrer">{overviewLink.text}</a>{overview.slice(overviewLinkIndex + overviewLink.text.length)}</> : overview}</p>
       </div>
     ) : null}
     <ul class="project-specs">

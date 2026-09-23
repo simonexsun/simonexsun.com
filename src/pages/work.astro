@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 import { getCollection } from "astro:content";
-const projects = (await getCollection("projects")).sort(
+const projects = (await getCollection("projects", ({ data }) => !data.hidden)).sort(
   (a, b) => new Date(b.data.date as string).valueOf() - new Date(a.data.date as string).valueOf()
 );
 ---

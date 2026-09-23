@@ -1,5 +1,6 @@
 ---
 title: Skateboard 4.2 Alpha
+hidden: true
 date: 2019-10-02
 cover: ./cover.jpg
 coverAlt: Soft pink and baby blue water ripples together in a subtle texture.

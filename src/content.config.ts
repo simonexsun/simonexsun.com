@@ -12,6 +12,7 @@ const projects = defineCollection({
         description: z.string(), // A short summary of the project
         cover: image(),
         coverAlt: z.string(),
+        hidden: z.boolean().default(false),
       }).passthrough(), // Allow any additional free-form fields (team, tools, timeline, type, client, overview, role, date, etc.)
   });
 
