@@ -1,6 +1,8 @@
 ---
 import HorizontalBreak from "../components/HorizontalBreak.astro";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import portrait from "../assets/portrait.jpeg";
 ---
 
 <Layout>
@@ -66,7 +68,7 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 
 		<div class="column_2">
-			<img src="src/assets/portrait.jpeg" alt="Simone Sun" />
+			<Image src={portrait} alt="Simone Sun" sizes="(max-width: 600px) 80vw, 32vw" />
 		</div>
 	</div>
 	<HorizontalBreak isDivider={false}/>
